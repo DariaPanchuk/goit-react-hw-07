@@ -9,6 +9,5 @@ export const selectError = state => state.contacts.error;
 export const selectFilter = state => state.filter.name;
 
 export const selectVisibleContacts = createSelector([selectContacts, selectFilter], (items, name) => {
-    console.log(name);
     return items.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
 });
